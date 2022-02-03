@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+<div class="container">
+    <h1>Titanic Simulator</h1>
+    <br>
+    <p>The sinking of the Titanic is one of the most infamous shipwrecks in history.
+
+On April 15, 1912, during her maiden voyage, the widely considered “unsinkable” RMS Titanic sank after colliding with an iceberg. Unfortunately, there weren’t enough lifeboats for everyone onboard, resulting in the death of 1502 out of 2224 passengers and crew.
+
+While there was some element of luck involved in surviving, it seems some groups of people were more likely to survive than others.</p>
+<br>
+    <p>In this simulator you can know your luck for survive from disastor, Let start! :-)</p>
+</div>
+
+<div class="container">
+    <form action="/survive-simulator" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        {{ wtf.quick_form(form) }}
+    </form>
+</div>
+<br>
+
+{% endblock %}
